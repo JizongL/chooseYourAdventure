@@ -20,8 +20,9 @@ func main() {
 	}
 	d := json.NewDecoder(f)
 	var story cyoa.Story
+
 	if err := d.Decode(&story); err != nil {
 		panic(err)
 	}
-	fmt.printf("%+v\n", story)
+	fmt.Printf("%+v\n", story)
 }
